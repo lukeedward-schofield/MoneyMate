@@ -35,7 +35,12 @@ public class Main {
                     //view expense
                     List<Expense> expenses = expenseService.viewExpenses();
 
-                    for(Expense expense : expenses){
+                    if (expenses.isEmpty()) {
+                        System.out.println("No current expenses\n");
+                        break;
+                    }
+
+                    for (Expense expense : expenses) {
                         System.out.println("|-----------------------|");
                         System.out.println("Expense: " + expense.getExpenseType());
                         System.out.println("Amount: " + expense.getExpenseAmount());

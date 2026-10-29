@@ -16,5 +16,14 @@ public class Helper {
     }
 
 
+    public static double getDoubleInput(){
+        String doubleInput = scn.nextLine();
+        if(! doubleInput.isEmpty()){
+            System.out.println("Invalid input for expense amount");
+            return;
+        }
+    }
+
+
 
 }
